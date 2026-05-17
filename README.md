@@ -75,7 +75,7 @@ Open PowerShell (Terminal on Windows 11) and run these commands:
 Install TinyTeX to your user AppData folder:
 
 ```powershell
-wget "https://github.com/rstudio/tinytex-releases/releases/download/daily/TinyTeX-1.zip" -OutFile "$env:TEMP\TinyTeX.zip"
+wget "https://github.com/rstudio/tinytex-releases/releases/download/daily/TinyTeX.zip" -OutFile "$env:TEMP\TinyTeX.zip"
 Expand-Archive -Force -Path "$env:TEMP\TinyTeX.zip" -DestinationPath $env:APPDATA
 Remove-Item "$env:TEMP\TinyTeX.zip"
 $env:PATH += ";$env:APPDATA\TinyTeX\bin\windows"
