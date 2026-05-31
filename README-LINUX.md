@@ -80,6 +80,7 @@ curl -L "https://github.com/rstudio/tinytex-releases/releases/download/daily/Tin
 tar -xzf /tmp/TinyTeX.tar.gz -C ~/.local/share
 rm /tmp/TinyTeX.tar.gz
 export PATH="$PATH:$HOME/.local/share/.TinyTeX/bin/x86_64-linux"
+
 ```
 
 To make the PATH change permanent:
@@ -87,6 +88,8 @@ To make the PATH change permanent:
 ```bash
 echo 'export PATH="$PATH:$HOME/.local/share/.TinyTeX/bin/x86_64-linux"' >> ~/.bashrc
 source ~/.bashrc
+tlmgr emoji ifplatform markdown csvsimple lua-ul
+
 ```
 
 > [!NOTE]
@@ -113,6 +116,7 @@ python3 -m pip install Pygments
 > SCRIPTS_DIR=$(python3 -c "import sysconfig; print(sysconfig.get_path('scripts'))")
 > echo "export PATH=\"\$PATH:$SCRIPTS_DIR\"" >> ~/.bashrc
 > source ~/.bashrc
+> 
 > ```
 
 #### Step 3: Download markdown-latex-pdf-builder
@@ -124,6 +128,7 @@ curl -L "https://github.com/abdxdev/markdown-latex-pdf-builder/archive/refs/head
 unzip -o /tmp/main.zip -d ~/.local/share/markdown-latex-pdf-builder
 rm /tmp/main.zip
 cp ~/.local/share/markdown-latex-pdf-builder/markdown-latex-pdf-builder-main/default.json ~/.local/share/markdown-latex-pdf-builder/default.json
+
 ```
 
 #### Step 4 (Optional): Install Mermaid CLI for diagram support
@@ -133,6 +138,7 @@ Install the Mermaid CLI and Chrome headless shell for rendering diagrams:
 ```bash
 npm install -g @mermaid-js/mermaid-cli
 npx puppeteer browsers install chrome-headless-shell
+
 ```
 
 > [!NOTE]
@@ -142,6 +148,7 @@ npx puppeteer browsers install chrome-headless-shell
 > pnpm setup && source ~/.bashrc
 > pnpm add -g @mermaid-js/mermaid-cli
 > pnpm -g exec puppeteer browsers install chrome-headless-shell
+> 
 > ```
 
 #### Step 5 (Optional): Install Python dependencies
@@ -231,6 +238,7 @@ rm -rf ~/.local/share/markdown-latex-pdf-builder/markdown-latex-pdf-builder-main
 curl -L "https://github.com/abdxdev/markdown-latex-pdf-builder/archive/refs/heads/main.zip" -o /tmp/main.zip
 unzip -o /tmp/main.zip -d ~/.local/share/markdown-latex-pdf-builder
 rm /tmp/main.zip
+
 ```
 
 ## Uninstallation
